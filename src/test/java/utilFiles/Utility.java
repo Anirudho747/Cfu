@@ -1,15 +1,15 @@
 package utilFiles;
 
 import bs.BaseClass;
-import testScreens.HomePage;
+import testScreens.HomeScreen;
 
 public class Utility extends BaseClass{
 	
-	HomePage hp;
+	HomeScreen hp;
 
 	public Utility()
 	{
-	    hp= new HomePage();
+	    hp= new HomeScreen();
 	}
 	
 	public void logIn()

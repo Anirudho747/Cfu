@@ -6,7 +6,7 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
-public class HomePage extends BaseClass{
+public class HomeScreen extends BaseClass{
 	
 
 	    @AndroidFindBy(id = "tvLoginBtn")
@@ -65,6 +65,25 @@ public class HomePage extends BaseClass{
 	    @iOSXCUITFindBy(id="l")
 	    public WebElement confirmParkingDetails;
 	    
+	    @AndroidFindBy(xpath = "(//*[@resource-id='com.mena.customer:id/icon'])[1]")
+	    @iOSXCUITFindBy(id="l")
+	    public WebElement fuelTile;
+
+	    @AndroidFindBy(xpath = "(//*[@resource-id='com.mena.customer:id/icon'])[2]")
+	    @iOSXCUITFindBy(id="l")
+	    public WebElement carWashTile;
+	    
+	    @AndroidFindBy(xpath = "(//*[@resource-id='com.mena.customer:id/icon'])[3]")
+	    @iOSXCUITFindBy(id="l")
+	    public WebElement batteryTile;
+	    
+	    @AndroidFindBy(xpath = "(//*[@resource-id='com.mena.customer:id/icon'])[4]")
+	    @iOSXCUITFindBy(id="l")
+	    public WebElement tyresTile;
+	    
+	    @AndroidFindBy(xpath = "(//*[@resource-id='com.mena.customer:id/icon'])[5]")
+	    @iOSXCUITFindBy(id="l")
+	    public WebElement engineOilTile;
 	    
 	    public void clickLoginButton()
 	    {
@@ -146,4 +165,33 @@ public class HomePage extends BaseClass{
 	    	click(confirmParkingDetails);
 	    }
 
+	    public void tapFuel()
+	    {
+	    	waitForVisibility(fuelTile);
+	    	click(fuelTile);
+	    }
+	    
+	    public void tapCarWash()
+	    {
+	    	waitForVisibility(carWashTile);
+	    	click(carWashTile);
+	    }
+	    
+	    public void tapBattery()
+	    {
+	    	waitForVisibility(batteryTile);
+	    	click(batteryTile);
+	    }
+	    
+	    public void tapTyres()
+	    {
+	    	waitForVisibility(tyresTile);
+	    	click(tyresTile);
+	    }
+	    
+	    public void tapEngineOil()
+	    {
+	    	waitForVisibility(engineOilTile);
+	    	click(engineOilTile);
+	    }
 }

@@ -8,45 +8,26 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import bs.BaseClass;
-import testScreens.HomePage;
+import testScreens.HomeScreen;
 import utilFiles.Utility;
 
 public class Login_ChangeAddress extends BaseClass{
 	
-	HomePage hp;
+	HomeScreen hp;
 	Utility util;
 	
 	 @BeforeClass
 	    public void beforeClass()
 	    {
-	        hp = new HomePage();
+	        hp = new HomeScreen();
 	        util = new Utility();
 	    }
-
-	 
-	    
 	    
 	    @Test
 	    public void logInAndSetLocation()
-	    {
-//	    	hp.clickLoginButton();
-//	    	hp.enterMobileNumber("529955465");
-//	    	hp.clickGetStarted();
-//	    	hp.enterPassword("Sample*87");
-//	    	hp.clickShowPassword();
-//	    	hp.clickSignInButton();
-//	    	hp.clickNotifyWhenSupportedButton();
-//	    	hp.clickNotifyWhenSupported2Button();
-//	    	hp.clickLocationHeader();
-//	    	hp.enterAddress("Satwa Bus");
-//	    	hp.selectLocation();
-//	    	hp.tapConfirmLocation();
-//	    	hp.tapConfirmParkingDetails();
-	    	
-	    	
+	    {	
 	    	util.logIn();
 	    	util.setAddress("Satwa Bus");
-	    	
 	    }
 
 }
