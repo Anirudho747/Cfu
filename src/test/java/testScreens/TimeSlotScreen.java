@@ -16,7 +16,11 @@ public class TimeSlotScreen extends BaseClass {
 	    @iOSXCUITFindBy(id="l")
 	    public WebElement time;
 	    
-	    @AndroidFindBy(xpath = "//*[contains(@text,'5 AM -')]")
+	    @AndroidFindBy(xpath = "//*[contains(@text,'7 AM -')]")
+	    @iOSXCUITFindBy(id="l")
+	    public WebElement carWashTime;
+	    
+	    @AndroidFindBy(id = "lActiveOrder")
 	    @iOSXCUITFindBy(id="l")
 	    public WebElement checkOut;
 	    
@@ -28,6 +32,11 @@ public class TimeSlotScreen extends BaseClass {
 	    public void selectTime()
 	    {
 	        click(time); 
+	    }
+	    
+	    public void selectCarWashTime()
+	    {
+	        click(carWashTime); 
 	    }
 	    
 	    public void tapCheckOut()
