@@ -92,9 +92,9 @@ public class BaseClass {
 	        e.sendKeys(txt);
 	    }
 
-	    public String getAttribute(WebElement e, String attr) {
+	    public String getText(WebElement e) {
 	        waitForVisibility(e);
-	        return(e.getAttribute(attr));
+	        return(e.getText());
 	    }
 
 }

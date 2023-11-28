@@ -28,7 +28,7 @@ public class FuelDeliveryScreen extends BaseClass{
 	    @iOSXCUITFindBy(id="l")
 	    public WebElement screenTitle;
 	    
-	    @AndroidFindBy(id = "ITimeSlot")
+	    @AndroidFindBy(id = "tvTimeSlot")
 	    @iOSXCUITFindBy(id="l")
 	    public WebElement timeSlot;
 	    
@@ -44,40 +44,45 @@ public class FuelDeliveryScreen extends BaseClass{
 	    @iOSXCUITFindBy(id="l")
 	    public WebElement allowCalls;
 	    
+	    @AndroidFindBy(id = "btnPrimary")
+	    @iOSXCUITFindBy(id="l")
+	    public WebElement rtaParking;
+	    
+	    @AndroidFindBy(id = "tvBrandModel")
+	    @iOSXCUITFindBy(id="l")
+	    public WebElement brandModel;
+	    
 	    public void tapWelcomeArrow()
 	    {
 	    	waitForVisibility(welcomeArrow);
 	    	click(welcomeArrow);
 	    }
 	    
-	    public void tapMinOrder()
+	    public String readMinOrder()
 	    {
 	    	waitForVisibility(minOrder);
-	    	click(minOrder);
+	    	return(getText(minOrder));
 	    }
 	    
-	    public void tapFuelType()
+	    public String readFuelType()
 	    {
 	    	waitForVisibility(fuelType);
-	    	click(fuelType);
+	    	return(getText(fuelType));
 	    }
 	    
-	    public void readPoints()
+	    public String readPoints()
 	    {
-	    	waitForVisibility(points);
-	    	click(points);
+	    	return(getText(points));
 	    }
 	    
-	    public void readScreenTitle()
+	    public String readScreenTitle()
 	    {
-	    	waitForVisibility(screenTitle);
-	    	click(screenTitle);
+	    	return(getText(screenTitle));
 	    }
 	    
-	    public void readTimeSlot()
+	    public String readTimeSlot()
 	    {
-	    	waitForVisibility(timeSlot);
-	    	click(timeSlot);
+	    	return(getText(timeSlot));
 	    }
 	    
 	    public void tapCloseScreen()
@@ -86,10 +91,14 @@ public class FuelDeliveryScreen extends BaseClass{
 	    	click(closeScreen);
 	    }
 	    
-	    public void readLocationDesc()
+	    public String readLocationDesc()
 	    {
-	    	waitForVisibility(locationDesc);
-	    	click(locationDesc);
+	    	return(getText(locationDesc));
+	    }
+	    
+	    public String readBrandModel()
+	    {
+	    	return(getText(brandModel));
 	    }
 	    
 	    public void tapAllowCalls()
@@ -97,5 +106,11 @@ public class FuelDeliveryScreen extends BaseClass{
 	    	waitForVisibility(allowCalls);
 	    	click(allowCalls);
 	    }
+	    
+	  public void tapRTAParking()
+	  {
+		    waitForVisibility(rtaParking);
+	    	click(rtaParking);
+	  }
 	
 }
