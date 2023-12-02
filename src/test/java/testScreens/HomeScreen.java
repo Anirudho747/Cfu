@@ -61,7 +61,7 @@ public class HomeScreen extends BaseClass{
 	    @iOSXCUITFindBy(id="l")
 	    public WebElement confirmLocation;
 
-	    @AndroidFindBy(id = "btnConfirm")
+	    @AndroidFindBy(xpath = "//*[@text='Confirm your parking details']")
 	    @iOSXCUITFindBy(id="l")
 	    public WebElement confirmParkingDetails;
 	    

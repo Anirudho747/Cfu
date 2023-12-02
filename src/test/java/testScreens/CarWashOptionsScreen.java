@@ -15,19 +15,19 @@ public class CarWashOptionsScreen extends BaseClass{
 	@iOSXCUITFindBy()
 	public WebElement minimizeButton;
 	
-	@AndroidFindBy(xpath="//*[@resource-id='com.mena.customer:id/tvTitle' and contains(@text,'Eco!')]")
+	@AndroidFindBy(xpath="//*[@resource-id='com.mena.customer:id/tvTitle' and contains(@text,'Classic Clean') and not(contains(@text,'Classic Clean +'))]")
 	@iOSXCUITFindBy()
 	public WebElement classicClean;
 	
-	@AndroidFindBy(xpath="//*[@resource-id='com.mena.customer:id/tvTitle' and contains(@text,'Popular!')]")
+	@AndroidFindBy(xpath="//*[@resource-id='com.mena.customer:id/tvTitle' and contains(@text,'Premium')]")
 	@iOSXCUITFindBy()
 	public WebElement premiumWash;
 	
-	@AndroidFindBy(xpath="//*[@resource-id='com.mena.customer:id/tvTitle' and contains(@text,'Interior')]")
+	@AndroidFindBy(xpath="//*[@resource-id='com.mena.customer:id/tvTitle' and contains(@text,'Classic Clean +')]")
 	@iOSXCUITFindBy()
 	public WebElement classicCleanInterior;
 	
-	@AndroidFindBy(xpath="//*[@resource-id='com.mena.customer:id/tvTitle' and contains(@text,'New!')]")
+	@AndroidFindBy(xpath="//*[@resource-id='com.mena.customer:id/tvTitle' and contains(@text,'Pressure')]")
 	@iOSXCUITFindBy()
 	public WebElement pressureWash;
 	
@@ -66,5 +66,80 @@ public class CarWashOptionsScreen extends BaseClass{
     @AndroidFindBy(id = "lActiveOrder")
     @iOSXCUITFindBy(id="l")
     public WebElement confirmWash;
+    
+    public void tapClassicCleanInterior()
+    {
+    	waitForVisibility(classicCleanInterior);
+    	click(classicCleanInterior);
+    }
+    
+    public void tapClassicClean()
+    {
+    	waitForVisibility(classicClean);
+    	click(classicClean);
+    }
+    
+    public void tapPremiumWash()
+    {
+    	waitForVisibility(premiumWash);
+    	click(premiumWash);
+    }
+    
+    public void tapPressureWash()
+    {
+    	waitForVisibility(pressureWash);
+    	click(pressureWash);
+    }
+    
+    public void tapConfirmWash()
+    {
+    	waitForVisibility(confirmWash);
+    	click(confirmWash);
+    }
+    
+    public String readClassicCleanPrice()
+    {
+    	return(getText(classicCleanPrice));
+    }
+    
+    public String readClassicCleanInteriorPrice()
+    {
+    	return(getText(classicCleanInteriorPrice));
+    }
+    
+    public String readPremiumPrice()
+    {
+    	return(getText(premiumWashPrice));
+    }
+    
+    public String readPressureWashPrice()
+    {
+    	return(getText(pressureWashPrice));
+    }
+    
+    public String readClassicCleanTime()
+    {
+    	return(getText(classicCleanTime));
+    }
+    
+    public String readClassicCleanInteriorTime()
+    {
+    	return(getText(classicCleanInteriorTime));
+    }
+    
+    public String readPremiumTime()
+    {
+    	return(getText(premiumWashTime));
+    }
+    
+    public String readPressureWashTime()
+    {
+    	return(getText(pressureWashTime));
+    }
+    
+    public String readConfirmWash()
+    {
+    	return(getText(confirmWash));
+    }
 
 }
